@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 # Usage: script/bootstrap
 # Sets up required modules for development.
 
@@ -10,8 +10,9 @@ set -euo pipefail
 VERSION="$1"
 
 # Update Tailor version in Dockerfile
-sed -i "" "s/tailor-[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}/tailor-${VERSION}/g" Dockerfile
+sed "s/tailor-[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}/tailor-${VERSION}/g" Dockerfile > Dockerfile.new
+mv Dockerfile.new Dockerfile
 
 # Remove old version of Tailor, download and extract new version
-[ -e tailor-*.tar ] && rm tailor-*.tar
+rm -f tailor-*.tar
 curl -#fLO https://github.com/sleekbyte/tailor/releases/download/v"${VERSION}"/tailor-"${VERSION}".tar
