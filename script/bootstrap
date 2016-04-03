@@ -13,6 +13,10 @@ VERSION="$1"
 sed "s/tailor-[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}/tailor-${VERSION}/g" Dockerfile > Dockerfile.new
 mv Dockerfile.new Dockerfile
 
+# Update Tailor version in engine.json
+sed "s/tailor-[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}/tailor-${VERSION}/g" engine.json > engine.json.new
+mv engine.json.new engine.json
+
 # Remove old version of Tailor, download and extract new version
 rm -f tailor-*.tar
 curl -#fLO https://github.com/sleekbyte/tailor/releases/download/v"${VERSION}"/tailor-"${VERSION}".tar
