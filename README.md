@@ -1,5 +1,7 @@
 # Code Climate Tailor Engine
 
+[![Code Climate](https://codeclimate.com/github/sleekbyte/codeclimate-tailor/badges/gpa.svg)](https://codeclimate.com/github/sleekbyte/codeclimate-tailor)
+
 `codeclimate-tailor` is a Code Climate engine that wraps [Tailor](https://tailor.sh). You can run it on your command line using the Code Climate CLI, or on the hosted analysis platform.
 
 Tailor is a cross-platform static analysis and lint tool for source code written in Apple's Swift programming language. It analyzes your code to ensure consistent styling and help avoid bugs.
