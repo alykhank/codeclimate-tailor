@@ -10,6 +10,6 @@ ADD tailor-0.9.0.tar /usr/src/app
 USER app
 VOLUME /code
 
-ENV JAVA_OPTS="-XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=30 -Xmx1G"
+ENV JAVA_OPTS="-XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=30 -Xmx1200M"
 
 CMD ["/usr/src/app/tailor-0.9.0/bin/tailor", "--format", "cc"]
