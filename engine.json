@@ -6,6 +6,6 @@
         "email": "team@sleekbyte.com"
     },
     "languages" : ["Swift"],
-    "version": "0.9.0",
+    "version": "0.10.0",
     "spec_version": "0.2.0"
 }
