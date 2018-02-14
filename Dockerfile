@@ -5,11 +5,11 @@ MAINTAINER Sleekbyte
 RUN useradd -u 9000 -r -s /bin/false app
 
 WORKDIR /code
-ADD tailor-0.10.0.tar /usr/src/app
+ADD tailor-0.12.0.tar /usr/src/app
 
 USER app
 VOLUME /code
 
 ENV JAVA_OPTS="-XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=30"
 
-CMD ["/usr/src/app/tailor-0.10.0/bin/tailor", "--format", "cc", "--purge", "20"]
+CMD ["/usr/src/app/tailor-0.12.0/bin/tailor", "--format", "cc", "--purge", "20"]
